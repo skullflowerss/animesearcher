@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    Font-size: 15px;
+}
+
+.form-container{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    justify-content: center;
+    padding-top: 2em;
+    text-align: center;
+}
+
+.form-container h1{
+    Font-Family: 'Roboto', Sans-Serif;
+    Font-Size: 35px;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+
+.results{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.container{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    overflow: auto;
+}
+
+.container h3{
+    Font-Family: 'Roboto', Sans-Serif;
+    Font-Size: 40px;
+    font-weight: 200; 
+}
+
+.cards{
+    display: inline-flex;
+    width: 40%;
+    height: auto;
+}
+
+.anime-card{
+    margin: 2em 3em;
+}
+
+.anime-title{
+    Font-Family: 'Roboto', Sans-Serif;
+    Font-Size: 35px;
+    font-weight: 700;
+}
+
+.anime-content p{
+    Font-Family: 'Droid Serif', Serif;
+    Font-size: 15px;
+    text-align: justify;
+}
