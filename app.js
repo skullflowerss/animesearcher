@@ -49,14 +49,14 @@ function update(data){
                 return `
                     <div class="anime-card">
                         <div class="anime-image">
-                            <img src="${anime.image_url}">
+                        <a href="${anime.url}" target="_blank"><img src="${anime.image_url}"></a>
                         </div>
                         <div class="anime-content">
-                            <span class="anime-title">${anime.title}</span>
+                            <h1 class="anime-title">${anime.title}</h1>
                             <p>${anime.synopsis}</p>
                         </div>
                         <div class="anime-action">
-                            <a href="${anime.url}">Find out more</a>
+                            
                         </div>
                     </div>
                 `
