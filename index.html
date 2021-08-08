@@ -4,33 +4,21 @@
         <title>Anime Api V2</title>
         <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Roboto:300" rel="stylesheet">
         <link rel="stylesheet" href="style.css" type="text/css">
+        <script type="module" src="./anime-component/anime-component.esm.js"></script>
     </head>
     <body>
+        <h1 class="title">Anime Searcher</h1>
         <div class="form-container">
-            <h1>Anime Searcher</h1>
             <form id="form" autocomplete="off">
-                <p>Do you want to limit your search to a few results?</p>
-                <input type="radio" id="yes" name="limit" value="yes">
-                <label for="yes">Yes</label>
-                <input type="radio" id="no" name="limit" value="no">
-                <label for="no">no</label><br><br>
-                <p>Number to limit:</p>
-                <select id="limit-search">
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select><br><br>
                 <label for="input">Name of the anime:</label>
                 <input type="text" id="input" value="">
-                <br><br>
                 <button id="submit">SUBMIT</button>
     
               </form>
         </div>
           <div id="results">
-
           </div>
           <script src="./app.js"></script>
+          <script type="module" src="./anime-component/anime-component.esm.js"></script>
     </body>
 </html>

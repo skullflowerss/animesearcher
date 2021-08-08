@@ -2,9 +2,13 @@
     padding: 0;
     margin: 0;
     Font-size: 15px;
+   font-family: sans-serif;
+}
 
-    
-    Font-Family: 'Droid Serif', Serif;
+.title{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
 }
 body{
    background-color: #276D9B; 
@@ -14,7 +18,7 @@ body{
 .form-container{
     width: 100%;
     height: auto;
-    display: inline-block;
+    display: flex;
     justify-content: center;
     padding-top: 2em;
     text-align: center;
@@ -27,6 +31,14 @@ body{
     margin-bottom: 1em;
 }
 
+label{
+    color: white;
+}
+
+#input{
+    width: 200px;
+    height: 30px;
+}
 
 .results{
     width: 100%;
@@ -55,42 +67,23 @@ body{
     height: auto;
 }
 
-.anime-card{
-    color: #F8C296;
-    background-color: #163D57 ;
-    width: 15%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 2em 3em;
-    padding: 1em;
-    height: auto;
-    border-radius: 4px;
+
+anime-card{
+   margin: 0.9rem;
 }
 
-.anime-image{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    height: auto;
-    padding-bottom: 1em;
+#submit{
+    width: 100px;
+    height: 35px;
+    background-color: white;
+    border: none;
+    color: black;
+    font-family: sans-serif;
+    border-radius: 0.4rem;
+    cursor: pointer;
 }
 
-.anime-image img{
-    max-width: 90%;
-    height: auto;
-}
-
-h1.anime-title{
-    Font-Family: 'Roboto', Sans-Serif;
-    Font-Size: 15px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 1em;
-}
-
-.anime-content p{
-    Font-Family: 'Droid Serif', Serif;
-    Font-size: 12px;
-    text-align: justify;
+#submit:hover{
+    background-color: black;
+    color: white;
 }

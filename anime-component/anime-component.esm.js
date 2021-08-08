@@ -1,0 +1,1 @@
+import{p as i,b as r}from"./p-7d13861a.js";(()=>{const r=import.meta.url,n={};return""!==r&&(n.resourcesUrl=new URL(".",r).href),i(n)})().then((i=>r([["p-396010de",[[1,"anime-card",{title_anime:[1537],scoring:[1537],airing:[1537],img_src:[1537],description:[1537],link:[1537],text:[32]}]]]],i)));

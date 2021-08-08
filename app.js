@@ -1,5 +1,4 @@
 const url = "https://api.jikan.moe/v3/search/anime?q="
-const limit = "&limit="
 
 //let anime = "Naruto"
 
@@ -11,15 +10,9 @@ submit.addEventListener('click',getInfo)
 function getInfo(event){
     event.preventDefault();
     const anime = input.value
-    const limit_y = document.getElementById('yes').checked
     let search ="";
-    if(limit_y){
-        const limitNum = document.getElementById('limit-search').value
-        search = url + anime + limit + limitNum
-    }else{
-        search = url + anime
-    }
-    console.log(search)
+    search = url + anime
+
     fetch(search)
     .then(res => res.json())
     .then(update)
@@ -47,18 +40,14 @@ function update(data){
             .sort((a,b)=>a.episodes-b.episodes)
             .map(anime=>{
                 return `
-                    <div class="anime-card">
-                        <div class="anime-image">
-                        <a href="${anime.url}" target="_blank"><img src="${anime.image_url}"></a>
-                        </div>
-                        <div class="anime-content">
-                            <h1 class="anime-title">${anime.title}</h1>
-                            <p>${anime.synopsis}</p>
-                        </div>
-                        <div class="anime-action">
-                            
-                        </div>
-                    </div>
+                    <anime-card
+                    img_src="${anime.image_url}"
+                    title_anime="${anime.title}"
+                    airing="${anime.start_date}"
+                    scoring="${anime.score}"
+                    link="${anime.url}"
+                    description="${anime.synopsis}"
+                   ></anime-card>
                 `
             }).join("");
 
