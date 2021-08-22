@@ -20,23 +20,27 @@ function getInfo(event){
 }
 
 function update(data){
+    console.log(data)
     let results = data.results
     .reduce((acc, anime)=>{
-
         const {type} = anime;
         if(acc[type] === undefined) acc[type] = [];
         acc[type].push(anime);
         return acc;
-
     }, {});
 
     console.log(results)
 
+
     const displayResults = document.getElementById('results')
 
     displayResults.innerHTML = Object.keys(results).map(key=>{
-
-            const animesHTML = results[key]
+            const filtered = results[key].filter(anime =>{
+                const title = anime.title.toLowerCase()
+                const word = input.value.toLowerCase()
+                return title.includes(word)
+            })
+            const animesHTML = filtered
             .sort((a,b)=>a.episodes-b.episodes)
             .map(anime=>{
                 return `
