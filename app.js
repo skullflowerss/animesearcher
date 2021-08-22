@@ -20,7 +20,7 @@ function getInfo(event){
 }
 
 function update(data){
-    console.log(data)
+
     let results = data.results
     .reduce((acc, anime)=>{
         const {type} = anime;
@@ -28,8 +28,6 @@ function update(data){
         acc[type].push(anime);
         return acc;
     }, {});
-
-    console.log(results)
 
 
     const displayResults = document.getElementById('results')
